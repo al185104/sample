@@ -38,8 +38,6 @@ jobs:
           # inside `dist/<project>`. Point the workflow to that directory so
           # the Static Web Apps action uploads the correct files.
           output_location: "dist/sample/browser" # Built app content directory
-          # Specify a Node.js version supported by Angular 20
-          node_version: "20"
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
