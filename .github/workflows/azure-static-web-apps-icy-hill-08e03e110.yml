@@ -34,7 +34,10 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
-          output_location: "dist/sample" # Built app content directory - optional
+          # Angular 20 outputs the production build to the `browser` folder
+          # inside `dist/<project>`. Point the workflow to that directory so
+          # the Static Web Apps action uploads the correct files.
+          output_location: "dist/sample/browser" # Built app content directory
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
